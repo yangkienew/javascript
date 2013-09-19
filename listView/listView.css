@@ -1,0 +1,52 @@
+  #listview #header 
+  { 
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0; 
+      white-space: nowrap; 
+      width: 100%;
+  }
+  #listview #header li 
+  { 
+      display: inline-block; 
+      margin: 0; 
+      width: 100px; 
+      line-height: 20px; 
+      padding-left: 5px; 
+      cursor: default
+  }
+  #listview #body
+  {
+      list-style-type: none; 
+      margin: 0; 
+      padding: 0; 
+      white-space: nowrap; 
+      width: 100%;
+  }
+  #listview #body li
+  {
+      display: inline-block; 
+      margin: 0; 
+      line-height: 30px;
+  }
+  
+  #listview #body li div
+  {
+      border: 1px dotted silver; 
+      padding-left: 5px; 
+      cursor: default;
+      color: Black;
+  }
+  
+   #listview #body li div.selected
+   {
+       background-color: #efefef;
+   }
+   
+   #listview #body li div.highlight
+   {
+       background-color: Highlight;
+      color:  HighlightText;
+   }
+
+

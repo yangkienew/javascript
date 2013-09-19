@@ -1,77 +1,42 @@
-<!DOCTYPE HTML>
+<!doctype html>
  
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>jQuery UI Sortable - Default functionality</title>
-  <style>
-       ul{list-style-type: none; padding: 0; margin: 0;height: 500px;margin: 100px;}
-       li{display: inline-block; margin: 0; padding: 0;width: 100px;border: 1px solid black; cursor: default}
-       
-  </style>
-  
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <!--link rel="stylesheet" href="/resources/demos/style.css" /-->
+  <title>ListView</title>
+  <link rel="stylesheet" href="../jquery/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="./listView.css" />
+  <script src="../jquery/jquery-1.9.1.js"></script>
+  <script src="../jquery/ui/jquery-ui.js"></script>
+  <script src="./listView.js"></script>
   <script>
-    /*(function($) {
-        $.fn.listView = function() {
-            var _th = $(this.selector + " th").first();
-            while (_th.length > 0) {
-                _th = _th.attr("draggable", "true").on("dragstart", dragstart).on("drop", drop).on("dragover", allowDrog).next();
-            }
-
-            var _dragObject = null;
-            function dragstart(e) {
-                _dragObject = e.target;
-                e.originalEvent.dataTransfer.setData("Text", e.target)
-            }
-            function drop(e) {
-                if (!_dragObject)
-                    return;
-                var text = e.target.innerHTML;
-                e.target.innerHTML = _dragObject.innerHTML;
-                _dragObject.innerHTML = text;
-                _dragObject = null;
-            }
-            function allowDrog(e) {
-                e.preventDefault();
-            }
-
-            this.appendRow = function(row) { //row: {column1: value1, column2: value2, column3:value3...}
-            }
-            this.insertRow = function(index, row) {
-            }
-
-        }
-    } (jQuery));*/
-
-      $(function() {
-          $("#headers").sortable({ placeholder: ".asd", cursor: "move", helper: "clone",
-              start: function(e, ui) {
-                  ui.placeholder.css("width", ui.item.css("width"));
-                  ui.placeholder.css("height", parseInt(ui.item.css("height")) - 5);
-                  ui.placeholder.css("border", "1px solid red");
-                  ui.placeholder.css("visibility", "hidden");
-                  var parent = this[0];
-              },
-              stop: function(e, ui) {
-              alert(ui.item.index());
-          }
-          });
-          //          $(".resizable").resizable({handles: "e"});
-      });
-
+      window.onload = function() {
+          $("#listview").listView().addRow({"b_c2": "iii"});
+      }
   </script>
 </head>
 <body>
-    <ul id="headers">
-        <li>1</li><li>2</li><li>3</li>
-    </ul>
-    
-    <ul id="also">
-        <li>4</li><li>5</li><li>6</li>
-    </ul>
+    <div id="listview" style="border: 1px solid silver; white-space: nowrap; overflow: auto; width: 1000px;">
+        <ul id="header">
+            <li id="h_c1" class="ui-state-default">Item 1
+            </li><li id="h_c2" class="ui-state-default">Item 2
+            </li><li id="h_c3" class="ui-state-default">Item 3
+            </li><li id="h_c4" class="ui-state-default">Item 4
+            </li><li id="h_c5" class="ui-state-default">Item 5
+            </li><li id="h_c6" class="ui-state-default">Item 6
+            </li><li id="h_c7" class="ui-state-default">Item 7</li>
+        </ul>
+        
+        <ul id="body">
+            <li id="b_c1"><div>Item 1</div><div>Item 1</div><div>Item 1</div><div>Item 1</div><div>Item 1</div><div>Item 1</div><div>Item 1</div><div>Item 1</div>
+            </li><li id="b_c2"><div>Item 2</div><div>Item 2</div><div>Item 2</div><div>Item 2</div><div>Item 2</div><div>Item 2</div><div>Item 2</div><div>Item 2</div>
+            </li><li id="b_c3"><div>Item 3</div><div>Item 3</div><div>Item 3</div><div>Item 3</div><div>Item 3</div><div>Item 3</div><div>Item 3</div><div>Item 3</div>
+            </li><li id="b_c4"><div>Item 4</div><div>Item 4</div><div>Item 4</div><div>Item 4</div><div>Item 4</div><div>Item 4</div><div>Item 4</div><div>Item 4</div>
+            </li><li id="b_c5"><div>Item 5</div><div>Item 5</div><div>Item 5</div><div>Item 5</div><div>Item 5</div><div>Item 5</div><div>Item 5</div><div>Item 5</div>
+            </li><li id="b_c6"><div>Item 6</div><div>Item 6</div><div>Item 6</div><div>Item 6</div><div>Item 6</div><div>Item 6</div><div>Item 6</div><div>Item 6</div>
+            </li><li id="b_c7"><div>Item 7</div><div>Item 7</div><div>Item 7</div><div>Item 7</div><div>Item 7</div><div>Item 7</div><div>Item 7</div><div>Item 7</div>
+            </li>
+        </ul>
+    </div> 
 </body>
 </html>
