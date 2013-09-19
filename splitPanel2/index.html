@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Split Panel</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="../jQuery/jquery-1.9.1.js"></script>
+    <script src="../jQuery/ui/jquery-ui.js"></script>
+     <script src="./splitPanel.js"></script>
+    <script>
+        window.onload = function() {
+            $("#splitPanel").splitPanel({style1: "vertical"});
+        }
+
+    </script>
+</head>
+<body>
+    <div id="splitPanel" style="width: 600px; height: 600px">
+        <div id="left" style="border: 1px solid silver">
+            Left
+        </div><div id="right"  style="border: 1px solid silver">
+            Right
+        </div>
+    </div>
+    
+    <div id="label">&nbsp;</div>
+</body>
+</html>

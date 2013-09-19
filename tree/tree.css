@@ -1,0 +1,44 @@
+.tree-node-plus, .tree-node-minus
+{
+    vertical-align: middle;
+}
+.tree-node-plus:hover, .tree-node-minus:hover 
+{
+    cursor: pointer;
+}
+.tree-node-icon
+{
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+}   
+
+ul
+{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    white-space:nowrap;
+}
+
+li
+{
+    white-space:nowrap;
+}
+
+.tree-node-text, .tree-node-icon, .tree-node-plus, .tree-node-minus
+{
+    vertical-align: middle;
+}
+    
+.tree-node-children
+{
+    padding-left: 10px;
+} 
+    
+.leaf
+{
+    padding-left: 9px;
+}
+
+

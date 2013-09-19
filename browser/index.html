@@ -1,0 +1,28 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>browser</title>
+  <link rel="stylesheet" href="../tree/tree.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="../jquery/jquery-1.9.1.js"></script>
+  <script src="../jQuery/ui/jquery-ui.js"></script>
+  <script src="../splitPanel2/splitPanel.js"></script>
+  <script src="../tree/tree.js"></script>
+  <script>
+    window.onload = function() {
+        $("#splitPanel").splitPanel();
+        var node = { id: "id", name: "Global", children: [{ id: "id", name: "c1", children: [{ name: "r1" }, { name: "r2"}] }, { id: "id", name: "c2", children: [{ name: "g1" }, { name: "g2"}]}] };
+        $("#tree").tree(node);
+    }
+  </script>
+</head>
+<body style="margin: 0 auto">
+    <div id="splitPanel" style="width: 1000px; height: 600px; overflow: hidden">
+        <div id="tree" style="border: 1px solid silver;padding: 10px;overflow: hidden">
+        </div>
+        <div style="border: 1px solid silver;">Right</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>tree</title>
+  <link rel="stylesheet" href="./tree.css">
+  <script src="../jquery/jquery-1.9.1.js"></script>
+  <script src="./tree.js"></script>
+  <script>
+    var node = { id: "global_id", name: "Global", children: [{ id: "c1_id", name: "c1" }, { id: "c2_id", name: "c2", children: [{ name: "g1", }, { name: "g2"}]}] };
+    window.onload = function() {
+    
+        $("#tree").tree(node);
+    }
+  </script>
+</head>
+<body>
+ 
+    <div id="tree"></div>
+    <textarea id="code"></textarea>
+</body>
+</html>
